@@ -1,12 +1,24 @@
 import Head from "next/head";
 import Image from "next/image";
+import styles from "../styles/Home.module.css";
+
+
 import Banner from "../components/banner/banner";
 import Card from "../components/Card/Card";
 import coffeeStores from "../data/coffee-stores.json";
 
-import styles from "../styles/Home.module.css";
+export async function getStaticProps(context) {
+  return {
+    props: {
+      // coffeeStores: coffeeStores,
+      coffeeStores,
+    }
+  }
+}
 
-export default function Home() {
+export default function Home(props) {
+  console.log("Hi getStaticProps");
+
   const handleOnBannerBtnClick = () => {
     console.log("It is the Banner button");
   };
@@ -32,7 +44,7 @@ export default function Home() {
           />
         </div>
         <div className={styles.cardLayout}>
-          {coffeeStores.map((coffeeStore, key) => {
+          {props.coffeeStores.map((coffeeStore, key) => {
             return (
               <Card
                 key={key}
