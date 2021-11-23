@@ -1,5 +1,5 @@
-import Document, { Html, NextScript, Main, Head } from "next/document";
-import link from "next/link";
+import Document, { Html, NextScript, Main, Head } from 'next/document';
+import link from 'next/link';
 
 // import Head from "next/head";
 
@@ -8,27 +8,12 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <link
-            rel="preload" 
-						href="/fonts/IBMPlexSans-Bold.ttf" 
-						as="font"
-            crossOrigin="anonymous">
-          </link>
-					<link
-            rel="preload" 
-						href="/fonts/IBMPlexSans-Regular.ttf" 
-						as="font"
-            crossOrigin="anonymous">
-          </link>
-					<link
-            rel="preload" 
-						href="/fonts/IBMPlexSans-SemiBold.ttf" 
-						as="font"
-            crossOrigin="anonymous">
-          </link>
+          <link rel="preload" href="/fonts/IBMPlexSans-Bold.ttf" as="font" crossOrigin="anonymous" />
+          <link rel="preload" href="/fonts/IBMPlexSans-Regular.ttf" as="font" crossOrigin="anonymous" />
+          <link rel="preload" href="/fonts/IBMPlexSans-SemiBold.ttf" as="font" crossOrigin="anonymous" />
         </Head>
         <body>
-          <Main></Main>
+          <Main />
           <NextScript />
         </body>
       </Html>
